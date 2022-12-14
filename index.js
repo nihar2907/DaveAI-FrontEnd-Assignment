@@ -1,4 +1,5 @@
 function ans() {
+    // taking input entered by the user
     var number_of_people = $("#number_of_people").val()
     var number_of_buses = $("#number_of_buses").val()
     do_allocation(number_of_people, number_of_buses)
@@ -30,7 +31,7 @@ function do_allocation(number_of_people, number_of_buses) {
         ans.push(1); ans.push(1);
     }
 
-    // 
+    
     while (totalPeople < number_of_people && totalBuses < number_of_buses) {
         // applying logic of Fibonnacci to add number of people in the bus
         let c = b;
@@ -56,7 +57,7 @@ function do_allocation(number_of_people, number_of_buses) {
         totalBuses++;
     }
 
-    // 
+    // displaying the result in frontend
     $(".output")[0].innerHTML = "";
     $(".final-op")[0].innerHTML = "";
     $(".final-op")[0].innerHTML = "Final output : [" + ans + "]";
